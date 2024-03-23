@@ -3,11 +3,15 @@ while(isNaN(num) || num ==0){
     num = +prompt('bu yerga son kritish kerak');
 }
 
+if(num %2 == 0){
+  num++
+}
+
 let box = "";
 
 for (let i = 0; i < num; i++) {
   for (let j = 0; j < num; j++) {
-    if (i == j || i == 0 || j == 0 || j == num - 1 || i == num -1) {
+    if (i == j || i == 0 || j == 0 || j == num - 1 || i == num -1|| i + j == num - 1 ) {
         box += "[*]"
     }else{
         box += "   "
